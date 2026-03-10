@@ -32,6 +32,15 @@ h3{
     border-radius: 50%;
     border: 5px solid #9abcf8
 }
+a:link, a:visited {
+    color: #9abcf8; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4d5f7e;
+    text-decoration: underline;
+}
 
 /********** Layout *********/
 .container {
@@ -56,4 +65,57 @@ h3{
     .col-span-4 {
         grid-column: span 4;
     }
+}
+
+/********** Navigation Using Flexbox *********/
+nav {
+    background-color: rgb(70, 66, 61);
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding; 0;
+    list-style: none; 
+    display: flex;
+    flex-flow: row wrap; 
+}
+
+nav li {
+    margin: 0 0.5rem;
+}
+nav a :link, nav a:visited {
+    color:white;
+    text-decoration: none;
+    font-size: 1.125rem;
+    padding: 1rem;
+    display: block;
+    transition: ease-in-out 250ms;
+}
+
+nav a:hover {
+    background-color: #9abcf8;
+    color: white;
+}
+
+/********** Components *********/
+
+.button:link, .button:visited {
+    color: white;
+    background-color: #9abcf8;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 1.75rem;
+    border-radius: 0.5em;
+    box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .15);
+    display: inline-block;
+    margin: 0 .25rem .25rem 0;
+    transition: background-color 0.5s ease;
+}
+.button:hover {
+    background-color: #4d5f7e;
 }
